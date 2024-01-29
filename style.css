@@ -2,11 +2,20 @@
 
 :root {
   /** COLORS */
-  --rtc-text: #f1f4f4;
+  --rtc-text: #ffae14;
+  --rtc-text-secundary: rgb(212, 212, 212);
   --rtc-color-background: #3b5b6d;
   --rtc-color-primary: #2f27ce;
   --rtc-color-secondary: #8ea5af;
   --rtc-color-accent: #433bff;
+  --rtc-color-gradient: linear-gradient(
+    135deg,
+    #ffebcc 0%,
+    #ffebcc 23%,
+    #d69a38 50%,
+    #3079a1 84%,
+    #126a97 100%
+  );
 
   --rtc-color-linearPrimarySecondary: linear-gradient(#2f27ce, #8ea5af);
   --rtc-color-linearPrimaryAccent: linear-gradient(#2f27ce, #433bff);
@@ -19,9 +28,9 @@
   --rtc-fontsize-h1: 4.21rem;
   --rtc-fontsize-h2: 3.158rem;
   --rtc-fontsize-h3: 2.369rem;
-  --rtc-fontsize-h4: 1.777rem;
-  --rtc-fontsize-h5: 1.333rem;
-  --rtc-fontsize-p: 1rem;
+  --rtc-fontsize-h4: 2rem;
+  --rtc-fontsize-h5: 1.5rem;
+  --rtc-fontsize-p: 1.3rem;
   --rtc-fontsize-small: 0.75rem;
 
   /** SPACINGS  */
@@ -64,13 +73,16 @@
   flex-wrap: wrap;
 }
 header.display-flex {
-  padding: var(--rtc-padding-s);
+  padding: var(--rtc-padding-m) (--rtc-padding-s);
   justify-content: space-around;
   align-items: center;
   gap: 30px;
   flex-wrap: nowrap;
-  position: fixed;
+  position: sticky;
+  top: 0;
   width: 100%;
+  height: 15%;
+  background: var(--rtc-color-gradient);
 }
 .display-flex > img {
   width: 230px;
@@ -88,9 +100,31 @@ header.display-flex > nav > ul a {
   color: black;
   font-size: var(--rtc-fontsize-h5);
   text-decoration: underline;
-  color: var(--rtc-color-primary);
+  color: var(--rtc-color-l);
   font-weight: 600;
 }
 header.display-flex > nav > ul > li:last-child {
   min-width: 144.06px;
+}
+#main-firstpage {
+  background-color: #3b5b6d;
+  background-image: url('https://www.transparenttextures.com/patterns/brushed-alum-dark.png');
+  min-height: 70svh;
+  width: 100%;
+  color: var(--rtc-text);
+  padding: var(--rtc-padding-m);
+}
+#main-firstpage > section:first-child {
+  width: 55%;
+}
+#main-firstpage > section:first-child > h1 {
+  font-size: var(--rtc-fontsize-h2);
+  width: 10em;
+  letter-spacing: 1px;
+}
+section:first-child > h1 ~ p {
+  font-size: var(--rtc-fontsize-h5);
+  text-align: justify;
+  margin-top: var(--rtc-margin-xl);
+  width: 90%;
 }
