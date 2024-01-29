@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+  /** COLORS */
+  --rtc-text: #f1f4f4;
+  --rtc-color-background: #3b5b6d;
+  --rtc-color-primary: #2f27ce;
+  --rtc-color-secondary: #8ea5af;
+  --rtc-color-accent: #433bff;
+
+  --rtc-color-linearPrimarySecondary: linear-gradient(#2f27ce, #8ea5af);
+  --rtc-color-linearPrimaryAccent: linear-gradient(#2f27ce, #433bff);
+  --rtc-color-linearSecondaryAccent: linear-gradient(#8ea5af, #433bff);
+  --rtc-color-radialPrimarySecondary: radial-gradient(#2f27ce, #8ea5af);
+  --rtc-color-radialPrimaryAccent: radial-gradient(#2f27ce, #433bff);
+  --rtc-color-radialSecondaryAccent: radial-gradient(#8ea5af, #433bff);
+
+  /** FONTS  */
+  --rtc-fontsize-h1: 4.21rem;
+  --rtc-fontsize-h2: 3.158rem;
+  --rtc-fontsize-h3: 2.369rem;
+  --rtc-fontsize-h4: 1.777rem;
+  --rtc-fontsize-h5: 1.333rem;
+  --rtc-fontsize-p: 1rem;
+  --rtc-fontsize-small: 0.75rem;
+
+  /** SPACINGS  */
+  --rtc-margin-xs: 0.5rem;
+  --rtc-margin-s: 1rem;
+  --rtc-margin-m: 1.5rem;
+  --rtc-margin-l: 2rem;
+  --rtc-margin-xl: 2.5rem;
+  --rtc-margin-xl: 3rem;
+  --rtc-margin-big: 4rem;
+
+  --rtc-padding-xs: 0.5rem;
+  --rtc-padding-s: 1rem;
+  --rtc-padding-m: 1.5rem;
+  --rtc-padding-l: 2rem;
+  --rtc-padding-xl: 2.5rem;
+  --rtc-padding-xl: 3rem;
+  --rtc-padding-big: 4rem;
+
+  --rtc-gap-xs: 0.2rem;
+  --rtc-gap-s: 0.5rem;
+  --rtc-gap-m: 0.7rem;
+  --rtc-gap-l: 1rem;
+  --rtc-gap-xl: 1.5rem;
+  --rtc-gap-xl: 2rem;
+  --rtc-gap-big: 3rem;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+header.display-flex {
+  padding: var(--rtc-padding-s);
+}
+.display-flex > img {
+  width: 200px;
+}
