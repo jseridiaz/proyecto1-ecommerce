@@ -48,6 +48,7 @@
   --rtc-gap-xl: 1.5rem;
   --rtc-gap-xl: 2rem;
   --rtc-gap-big: 3rem;
+  /** Final de las variables */
 }
 * {
   box-sizing: border-box;
@@ -55,6 +56,7 @@
   margin: 0;
   list-style-type: none;
   text-decoration: none;
+  font-family: Lato, sans-serif;
 }
 
 .display-flex {
@@ -63,7 +65,26 @@
 }
 header.display-flex {
   padding: var(--rtc-padding-s);
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
 }
 .display-flex > img {
   width: 230px;
+}
+header.display-flex > nav {
+  width: 50%;
+}
+header.display-flex > nav > ul {
+  width: 100%;
+  justify-content: space-around;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+header.display-flex > nav > ul a {
+  color: black;
+  font-size: var(--rtc-fontsize-h5);
+  text-decoration: underline;
+  color: var(--rtc-color-primary);
+  font-weight: 600;
 }
