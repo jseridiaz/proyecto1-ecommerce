@@ -97,10 +97,9 @@ header.display-flex > nav > ul {
   flex-wrap: nowrap;
 }
 header.display-flex > nav > ul a {
-  color: black;
   font-size: var(--rtc-fontsize-h5);
   text-decoration: underline;
-  color: var(--rtc-color-l);
+  color: black;
   font-weight: 600;
 }
 header.display-flex > nav > ul > li:last-child {
