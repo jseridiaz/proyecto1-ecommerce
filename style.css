@@ -67,7 +67,10 @@ header.display-flex {
   padding: var(--rtc-padding-s);
   justify-content: space-around;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
+  flex-wrap: nowrap;
+  position: fixed;
+  width: 100%;
 }
 .display-flex > img {
   width: 230px;
@@ -87,4 +90,7 @@ header.display-flex > nav > ul a {
   text-decoration: underline;
   color: var(--rtc-color-primary);
   font-weight: 600;
+}
+header.display-flex > nav > ul > li:last-child {
+  min-width: 144.06px;
 }
