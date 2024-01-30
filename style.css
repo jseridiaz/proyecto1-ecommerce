@@ -6,6 +6,7 @@
   --rtc-text-secundary: rgb(212, 212, 212);
   --rtc-color-background: #3b5b6d;
   --rtc-color-background-opacity: #747474cf;
+  --rtc-background-card: white;
   --rtc-color-primary: #2f27ce;
   --rtc-color-secondary: #8ea5af;
   --rtc-color-accent: #433bff;
@@ -193,7 +194,7 @@ input::placeholder {
   align-items: center;
 }
 #main-firstpage > section:nth-child(2) > h1 {
-  margin-top: var(--rtc-margin-xl);
+  margin-top: var(--rtc-margin-m);
   font-size: var(--rtc-fontsize-h1);
   padding: 0 var(--rtc-padding-big);
   text-align: center;
@@ -267,8 +268,7 @@ section.information-services {
 }
 section.information-services > article {
   width: 25%;
-  padding: var(--rtc-padding-m);
-
+  padding: var(--rtc-padding-l);
   justify-content: space-around;
 }
 section.information-services > article > img {
@@ -290,13 +290,13 @@ article:not(article:nth-child(4)) > img {
   justify-content: space-around;
   background-color: var(--rtc-color-background);
   background-image: url('https://www.transparenttextures.com/patterns/brushed-alum-dark.png');
-  gap: 0px;
 }
 #service > div {
   width: 26%;
   position: relative;
   gap: 10px;
   flex-direction: column;
+  height: 300px;
 }
 #service > div:nth-child(2) {
   width: 42%;
@@ -306,37 +306,43 @@ article:not(article:nth-child(4)) > img {
 
 #service > div > img {
   width: 100%;
-  height: 250px;
+  height: 100%;
   object-fit: cover;
 }
 #service > div > *:not(img) {
-  position: relative;
-  bottom: 250px;
-  left: 20px;
+  position: absolute;
+  right: 0;
   width: 12.25em;
   color: rgb(255, 255, 255);
   font-weight: 700;
   background-color: rgb(130 122 122 / 61%);
+  z-index: 1;
+}
+#service > div > p {
+  top: 20%;
+  right: 0;
+  width: 14.25em;
 }
 #featured-products {
-  padding: var(--rtc-padding-xs) var(--rtc-padding-m);
+  padding: 0 var(--rtc-padding-xs);
   justify-content: center;
 }
 #featured-products > h2 {
   width: 100%;
   text-align: center;
   font-size: var(--rtc-fontsize-h3);
-  margin: var(--rtc-margin-m) auto;
 }
 #featured-products > div {
-  border: 0.5px solid #bababa8a;
+  position: relative;
   flex-direction: column;
   width: 15%;
 }
-#featured-products > div > img {
+
+#featured-products > div > a > img {
   height: 300px;
   width: 100%;
 }
 #featured-products > div > * {
   background-color: white;
+  border: none;
 }
