@@ -5,6 +5,7 @@
   --rtc-text: #ffae14;
   --rtc-text-secundary: rgb(212, 212, 212);
   --rtc-color-background: #3b5b6d;
+  --rtc-color-background-opacity: #747474cf;
   --rtc-color-primary: #2f27ce;
   --rtc-color-secondary: #8ea5af;
   --rtc-color-accent: #433bff;
@@ -62,6 +63,7 @@
   /** Box Shadows  */
   --rtc-boxshadow-primary: 3px 2px 76px -28px rgb(181, 179, 181);
   /** Final de las variables */
+  max-width: 100svw;
 }
 * {
   box-sizing: border-box;
@@ -145,11 +147,12 @@ input::placeholder {
 #main-firstpage {
   background-color: #3b5b6d;
   background-image: url('https://www.transparenttextures.com/patterns/brushed-alum-dark.png');
-  min-height: 70svh;
+  min-height: 100%;
   width: 100%;
   color: var(--rtc-text);
   padding: var(--rtc-padding-m);
   flex-direction: column;
+  gap: 25px;
 }
 
 #main-firstpage > section:first-child {
@@ -184,7 +187,7 @@ input::placeholder {
 }
 #main-firstpage > section:nth-child(2) {
   width: 100%;
-  height: 600px;
+  height: fit-content;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -192,13 +195,14 @@ input::placeholder {
 #main-firstpage > section:nth-child(2) > h1 {
   margin-top: var(--rtc-margin-xl);
   font-size: var(--rtc-fontsize-h1);
+  padding: 0 var(--rtc-padding-big);
   text-align: center;
   letter-spacing: 1px;
 }
 section:nth-child(2) > h1 ~ p {
   font-size: var(--rtc-fontsize-h5);
   text-align: justify;
-  margin-top: var(--rtc-margin-xl);
+  margin-top: var(--rtc-margin-xs);
   padding: 0 var(--rtc-padding-big);
   width: 95%;
 }
@@ -217,9 +221,8 @@ section:nth-child(2) > h1 ~ p {
   color: white;
 }
 #main-firstpage > section:nth-child(3) {
-  margin-top: var(--rtc-margin-m);
+  margin: 0 var(--rtc-margin-xl);
   justify-content: space-around;
-
   gap: 3em;
 }
 #main-firstpage > section:nth-child(3) > h2 {
@@ -227,23 +230,113 @@ section:nth-child(2) > h1 ~ p {
   width: 100%;
   text-align: center;
 }
+#main-firstpage > section:nth-child(3) {
+  column-gap: 40px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 #main-firstpage > section:nth-child(3) > article {
   width: 15%;
   text-align: center;
-  gap: 20px;
   justify-content: center;
 }
 #main-firstpage > section:nth-child(3) > article > h3 {
   width: fit-content;
 }
+#main-firstpage > section:nth-child(3) > article > a:link {
+  color: var(--rtc-color-accent);
+}
+#main-firstpage > section:nth-child(3) > article > a:visited {
+  color: purple;
+}
+
 #main-firstpage > section:nth-child(3) > article > a > img {
   width: 100%;
-  border-radius: 100%;
-  padding-bottom: var(--rtc-padding-l);
 }
 #main-firstpage > section:nth-child(3) > article > a > img:first-child {
-  height: 250px;
-  border-radius: 100%;
+  transform: scale(0.8);
+  width: 15.62em;
+  height: 15.62em;
+  border-radius: 50%;
 }
-#main-firstpage > section:nth-child(3) > article > a > p {
+
+section.information-services {
+  max-width: 100svw;
+  background-color: var(--rtc-color-background-opacity);
+  height: fit-content;
+}
+section.information-services > article {
+  width: 25%;
+  padding: var(--rtc-padding-m);
+
+  justify-content: space-around;
+}
+section.information-services > article > img {
+  width: 3em;
+  height: 3em;
+}
+section.information-services > article > img ~ * {
+  width: 9.37em;
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+}
+section.information-services > article:not(article:nth-child(2)) > img,
+article:not(article:nth-child(4)) > img {
+  background-color: white;
+}
+#service {
+  width: 100%;
+  justify-content: space-around;
+  background-color: var(--rtc-color-background);
+  background-image: url('https://www.transparenttextures.com/patterns/brushed-alum-dark.png');
+  gap: 0px;
+}
+#service > div {
+  width: 26%;
+  position: relative;
+  gap: 10px;
+  flex-direction: column;
+}
+#service > div:nth-child(2) {
+  width: 42%;
+  position: relative;
+  flex-direction: column;
+}
+
+#service > div > img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+#service > div > *:not(img) {
+  position: relative;
+  bottom: 250px;
+  left: 20px;
+  width: 12.25em;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  background-color: rgb(130 122 122 / 61%);
+}
+#featured-products {
+  padding: var(--rtc-padding-xs) var(--rtc-padding-m);
+  justify-content: center;
+}
+#featured-products > h2 {
+  width: 100%;
+  text-align: center;
+  font-size: var(--rtc-fontsize-h3);
+  margin: var(--rtc-margin-m) auto;
+}
+#featured-products > div {
+  border: 0.5px solid #bababa8a;
+  flex-direction: column;
+  width: 15%;
+}
+#featured-products > div > img {
+  height: 300px;
+  width: 100%;
+}
+#featured-products > div > * {
+  background-color: white;
 }
