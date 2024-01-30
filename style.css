@@ -193,8 +193,14 @@ button > img {
 #login > details > summary {
   cursor: pointer;
 }
-#login > details > summary::after {
+#login > p:last-child {
+  cursor: pointer;
+}
+#login > p:last-child::after {
   content: '▼';
+}
+form {
+  padding-top: 200px;
 }
 input::placeholder {
   color: rgb(146, 146, 146);
