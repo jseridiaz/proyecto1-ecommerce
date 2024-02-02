@@ -345,7 +345,7 @@ section.information-services {
   justify-content: center;
 }
 section.information-services > article {
-  width: 25%;
+  width: 20%;
   margin: var(--rtc-margin-l);
   justify-content: center;
   column-gap: 10px;
